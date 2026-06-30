@@ -25,21 +25,32 @@ ai-testing-practice/
 │   ├── tests/
 │   └── README.md
 ├── 03-prompt-testing/           # 阶段3：Prompt测试框架
-│   ├── cases/
-│   ├── prompts/
+│   ├── src/
+│   ├── test_cases/
 │   ├── tests/
 │   └── README.md
 ├── 04-rag-evaluation/           # 阶段4：RAG评测工具
-│   ├── app/
-│   ├── datasets/
+│   ├── src/
 │   ├── tests/
 │   └── README.md
-├── 05-security-testing/         # AI安全测试
-├── 06-agent-testing/            # Agent测试
-├── 07-performance-testing/      # 性能测试
-├── scripts/                     # CI/CD脚本
+├── 05-ai-security/              # 阶段5：AI安全测试
+│   ├── src/
+│   ├── tests/
+│   └── README.md
+├── 06-agent-testing/            # 阶段6：Agent测试
+│   ├── src/
+│   ├── tools/
+│   ├── tests/
+│   └── README.md
+├── 07-performance-testing/      # 阶段7：性能测试
+│   ├── src/
+│   ├── tests/
+│   └── README.md
 ├── docs/                        # 文档
-├── .github/                     # GitHub Actions配置
+│   └── AI测试学习路线.md
+├── run_all_tests.sh             # 测试脚本（Linux/Mac）
+├── run_all_tests.bat            # 测试脚本（Windows）
+├── .env.example                 # 环境变量示例
 ├── requirements.txt
 ├── pytest.ini
 └── README.md
@@ -80,12 +91,27 @@ OPENAI_API_KEY=sk-your-key-here
 
 ### 运行测试
 
-```bash
-# 运行所有测试
-pytest
+**注意**: 由于各阶段都有`conftest.py`文件，直接运行`pytest`会有导入冲突。推荐使用以下方式：
 
+**方式1: 使用测试脚本（推荐）**
+```bash
+# Linux/Mac
+bash run_all_tests.sh
+
+# Windows
+run_all_tests.bat
+```
+
+**方式2: 分阶段运行**
+```bash
 # 运行特定阶段的测试
-pytest 01-api-test-framework/tests/
+pytest 01-api-test-framework/tests/ -v
+pytest 02-llm-basic/tests/ -v
+pytest 03-prompt-testing/tests/ -v
+pytest 04-rag-evaluation/tests/ -v
+pytest 05-ai-security/tests/ -v
+pytest 06-agent-testing/tests/ -v
+pytest 07-performance-testing/tests/ -v
 
 # 运行冒烟测试
 pytest -m smoke
