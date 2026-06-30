@@ -1,0 +1,77 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Reports
+reports/
+*.html
+*.json
+test-results/
+smoke-report.json
+regression-report.json
+full-report.json
+security-report.json
+cost-report.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.pyc
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Locust
+*.csv
+
+# Data files (if any sensitive data)
+# Uncomment if needed
+# datasets/sensitive/
