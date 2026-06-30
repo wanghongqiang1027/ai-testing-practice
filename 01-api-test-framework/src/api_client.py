@@ -4,14 +4,14 @@ API Client for testing
 """
 
 import httpx
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Union, List
 from pydantic import BaseModel
 
 
 class APIResponse(BaseModel):
     """API响应模型"""
     status_code: int
-    data: Optional[Dict[str, Any]] = None
+    data: Optional[Union[Dict[str, Any], List[Dict[str, Any]]]] = None
     error: Optional[str] = None
 
 
