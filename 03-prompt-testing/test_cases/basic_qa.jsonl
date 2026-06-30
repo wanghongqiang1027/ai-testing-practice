@@ -1,0 +1,10 @@
+{"id": "qa_001", "input": "什么是Python？", "category": "基础问答", "tags": ["python", "编程"], "expected_keywords": ["编程语言", "解释型"], "forbidden_keywords": ["Java", "C++"], "max_length": 300, "priority": "high"}
+{"id": "qa_002", "input": "1+1等于几？", "category": "数学", "must_include": ["2"], "max_length": 50, "priority": "high"}
+{"id": "qa_003", "input": "请列举3种常见的编程语言", "category": "列表", "tags": ["编程"], "expected_keywords": ["Python", "Java", "JavaScript"], "min_length": 30, "priority": "medium"}
+{"id": "qa_004", "input": "解释什么是机器学习", "category": "AI", "expected_keywords": ["数据", "模型", "训练"], "min_length": 100, "max_length": 400, "priority": "medium"}
+{"id": "qa_005", "input": "什么是HTTP协议？", "category": "网络", "expected_keywords": ["协议", "传输", "客户端", "服务器"], "max_length": 300, "priority": "medium"}
+{"id": "format_001", "input": "生成一个JSON对象，包含name和age字段", "category": "格式化", "tags": ["json"], "format": "json", "priority": "high"}
+{"id": "format_002", "input": "列出学习Python的5个步骤", "category": "列表", "regex_pattern": "1\\..*2\\..*3\\..*4\\..*5\\.", "priority": "medium"}
+{"id": "code_001", "input": "写一个Python函数计算斐波那契数列", "category": "代码", "tags": ["python", "代码"], "expected_keywords": ["def", "fibonacci"], "priority": "medium"}
+{"id": "summary_001", "input": "用一句话总结：人工智能是计算机科学的一个分支，致力于创建能够执行通常需要人类智能的任务的系统", "category": "总结", "max_length": 50, "priority": "low"}
+{"id": "translate_001", "input": "将'Hello World'翻译成中文", "category": "翻译", "must_include": ["你好", "世界"], "max_length": 20, "priority": "low"}
